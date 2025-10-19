@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Dynamic Form with JSON Display & Theme Toggle</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h2>Dynamic Form with JSON Display</h2>
+
+    <button class="theme-toggle" id="themeToggle">Switch to Dark Theme</button>
+
+    <form id="userForm">
+      <label>Name:</label>
+      <input type="text" id="name" />
+      <div class="error" id="nameError"></div>
+
+      <label>Email:</label>
+      <input type="email" id="email" />
+      <div class="error" id="emailError"></div>
+
+      <label>Age:</label>
+      <input type="number" id="age" />
+      <div class="error" id="ageError"></div>
+
+      <label>Date of Birth:</label>
+      <input type="date" id="dob" />
+      <div class="error" id="dobError"></div>
+
+      <label>Gender:</label>
+      <div class="radio-group">
+        <label><input type="radio" name="gender" value="Male" /> Male</label>
+        <label
+          ><input type="radio" name="gender" value="Female" /> Female</label
+        >
+        <label><input type="radio" name="gender" value="Other" /> Other</label>
+      </div>
+      <div class="error" id="genderError"></div>
+
+      <label>Hobbies:</label>
+      <div class="checkbox-group">
+        <label><input type="checkbox" value="Reading" /> Reading</label>
+        <label><input type="checkbox" value="Traveling" /> Traveling</label>
+        <label><input type="checkbox" value="Coding" /> Coding</label>
+        <label><input type="checkbox" value="Music" /> Music</label>
+      </div>
+      <div class="error" id="hobbiesError"></div>
+
+      <label>Country:</label>
+      <select id="country">
+        <option value="">Select Country</option>
+        <option value="USA">USA</option>
+        <option value="UK">UK</option>
+        <option value="India">India</option>
+        <option value="Canada">Canada</option>
+      </select>
+      <div class="error" id="countryError"></div>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <div id="jsonDisp">[]</div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

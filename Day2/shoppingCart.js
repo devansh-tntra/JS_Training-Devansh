@@ -96,6 +96,7 @@ function calculateCart() {
     sum = sum + item.price * item.quantity;
     count += item.quantity;
   });
+  sum = sum.toFixed(2)
   subtotalCell.innerHTML = sum;
 
   if (count > 10) {
@@ -105,7 +106,9 @@ function calculateCart() {
   if (sum > 500) {
     pDisct = (sum * 0.05).toFixed(2);
   }
-  fTotal = (sum - qDisct - pDisct).toFixed(2);
+  fTotal = (sum - qDisct - pDisct);
+  fTotal = fTotal.toFixed(2);
+  console.log(fTotal)
 
   quantityDiscount.innerHTML = qDisct;
   priceDiscount.innerHTML = pDisct;
